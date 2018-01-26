@@ -1,6 +1,6 @@
 # SarvOS1
 
-It is an attempt to make a small os for educational purpose. 
+It is an attempt to make a small os for educational purpose.
 
 open terminal and enter "make" to boot into well nothing for now :)
 **Pre-requisite** qemu and nasm
@@ -14,5 +14,7 @@ Check [Todo List](https://github.com/rishabhiitbh/SarvOS1/blob/master/Todo.md)
 
 
 **Rishabh Poddar**
+**Arjun Singh Kushwaha**
 
 *email- rishabh.poddar0207@gmail.com*
+*email- arjunkushwaha99@gmail.com*
