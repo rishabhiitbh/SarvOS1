@@ -14,7 +14,9 @@ Check [Todo List](https://github.com/rishabhiitbh/SarvOS1/blob/master/Todo.md)
 
 
 **Rishabh Poddar**
+
 **Arjun Singh Kushwaha**
 
 *email- rishabh.poddar0207@gmail.com*
+
 *email- arjunkushwaha99@gmail.com*
