@@ -1,2 +1,2 @@
 #Making Bootloader
-try to make secondary bootloader and gdt 
+try to make bootlader fat32 aware
