@@ -1,4 +1,5 @@
 [org 0x7c00]            ;loading address of bootloader
+[bits 16]
 jmp ($ + 0x5a)          ;skip 90 bytes for fat32 table
 db  0x90                ;see fat documentaion
 
@@ -53,13 +54,18 @@ dw 0x0000
 db 'NO NAME    '         ; 11 byte vol label               
 db 'FAT32   '            ;file sys type   
 bootcode:
-mov si,my_message
+
+call diskread
+mov si ,second_sector
 call printstring
 
 jmp $                   ;hang the cpu
 %include "include/asm/print.s"
+%include "include/asm/lba.s"
 my_message:
-    db 'hello printing from the bootloader',0 
+    db 'Loading second sector',0 
+
 
 times 510 - ($-$$) db 0 ;pad remaining bytes with 0
-dw 0xaa55               ;magic number at the end of boot sector 
+dw 0xaa55               ;magic number at the end of boot sector
+second_sector: 
