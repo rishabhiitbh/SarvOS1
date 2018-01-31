@@ -1,5 +1,5 @@
-[org 0x7c00]            ;loading address of bootloader
-[bits 16]
+org 7C00h            ;loading address of bootloader
+BITS 16
 jmp ($ + 0x5a)          ;skip 90 bytes for fat32 table
 db  0x90                ;see fat documentaion
 
