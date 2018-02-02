@@ -1,6 +1,14 @@
-#include "include/c_header/types.h"
+#include "include/c_header/fat32.h"
 
-int main ()
+extern void loader_main()
 {
-    uint16 bla=15;
+    BPB *p;
+    p=0x7c00;
+    char c = p->VolumeLabel[2];
+        asm(
+            "mov %0, %%al;"
+            "mov $0x0E, %%ah;"
+            "int $0x10;"
+            :
+            : "r"(c));
 }

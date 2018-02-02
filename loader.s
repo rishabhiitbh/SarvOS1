@@ -1,5 +1,12 @@
-[org 0x7e00]            
-[bits 16]
-db 'successfully loaded second sector',0
-times 510 - ($ - $$) db 0
-dw 0xaa55  
+
+global _start            
+BITS 16
+extern loader_main
+_start:
+  mov si, loaded
+  call printstring
+  call loader_main
+  jmp $
+  %include "include/asm/print.s"
+  loaded:
+    db 'loaded secondary ',10,13,0
