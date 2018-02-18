@@ -1,7 +1,7 @@
 #ifndef FAT32_H
 #define FAT32_H
 #include "types.h"
-typedef struct __attribute__((packed)) BootParameterBlock 
+class __attribute__((packed)) BootParameterBlock 
 {
     uint8  IgnoreJump[3];
     uint8  OEM_Name[8];
@@ -30,5 +30,7 @@ typedef struct __attribute__((packed)) BootParameterBlock
     uint32 VolumeID;
     uint8  VolumeLabel[11];
     uint8  FileSysType[8];
-}BPB;
+};
+
+
 #endif

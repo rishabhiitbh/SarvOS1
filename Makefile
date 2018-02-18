@@ -21,5 +21,5 @@ mkdisc: boot_asm.o secboot
 	qemu-system-x86_64 temp.img
 secboot:
 	nasm loader.s -f elf32 -o loader.o
-	gcc -O0 -ffreestanding -m32 -g -c -fno-pie boot_load.c -o boot_load.o
+	g++ -O0 -ffreestanding -m32 -g -c -fno-pie boot_load.cpp -o boot_load.o
 	ld -o loader.bin -m elf_i386 -Ttext 0x7e00 loader.o boot_load.o --oformat binary 
